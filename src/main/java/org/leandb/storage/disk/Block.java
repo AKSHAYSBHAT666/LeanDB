@@ -1,4 +1,4 @@
-package org.leandb.storage;
+package org.leandb.storage.disk;
 
 /*
 Block class is physical identity/location
@@ -12,7 +12,7 @@ public class Block
     private int blk_num;
     private String tbl_fl_nm;
 
-    Block(int blk_num, String tbl_fl_nm)
+    public Block(int blk_num, String tbl_fl_nm)
     {
         this.blk_num = blk_num;
         this.tbl_fl_nm = tbl_fl_nm;

@@ -1,5 +1,9 @@
 package org.leandb.storage;
 
+import org.leandb.storage.disk.Block;
+import org.leandb.storage.disk.DBStorageEngine;
+import org.leandb.storage.disk.Page;
+
 import java.nio.charset.StandardCharsets;
 
 public class StorageClient

@@ -1,6 +1,6 @@
-package org.leandb.storage;
+package org.leandb.storage.disk;
 
-import org.leandb.commons.storage.Properties;
+import org.leandb.commons.Properties;
 
 /*
 Page to hold the byte[] data to be stored
@@ -17,7 +17,7 @@ public class Page
     byte[] data;
     Block blk;
 
-    Page(Block blk)
+    public Page(Block blk)
     {
         this.blk = blk;
         this.data = new byte[Properties.BLOCK_SIZE];

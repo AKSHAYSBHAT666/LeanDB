@@ -1,6 +1,6 @@
-package org.leandb.storage;
+package org.leandb.storage.disk;
 
-import org.leandb.commons.storage.Properties;
+import org.leandb.commons.Properties;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
