@@ -11,8 +11,9 @@ import java.nio.file.StandardOpenOption;
 
 public class DBStorageEngine
 {
-    public int fl_write(Block blk, Page pg)
+    public synchronized int fl_write(Page pg)
     {
+        Block blk = pg.get_blk();
         long offset = (long) blk.get_blk_num() * Properties.BLOCK_SIZE;
         Path tbl_fl_nm = Paths.get(blk.get_tbl_fl_nm());
 
@@ -31,7 +32,7 @@ public class DBStorageEngine
         return -1;
     }
 
-    public byte[] fl_read(Block blk)
+    public synchronized byte[] fl_read(Block blk)
     {
         long offset = (long) blk.get_blk_num() * Properties.BLOCK_SIZE;
         Path tbl_fl_nm = Paths.get(blk.get_tbl_fl_nm());
