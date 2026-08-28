@@ -1,7 +1,11 @@
 package org.leandb;
 
+import org.leandb.storage.StorageClient;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        StorageClient storageClient = new StorageClient();
+        storageClient.run();
     }
 }
